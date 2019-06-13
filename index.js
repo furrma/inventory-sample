@@ -24,7 +24,7 @@ app.listen(3000,()=>console.log('Express server is running at port number: 3000'
 
 //get items
 app.get('/items',(req, res)=>{
-    mysqlConnection.query('SELECT * FROM items',(err, rows, field)=>{
+    mysqlConnection.query('SELECT * FROM items',(err, rows, fields)=>{
         if(!err)
         res.send(rows);
         else
